@@ -1,0 +1,12 @@
+/* =Styles for 'radio-image' meta boxes
+-------------------------------------------------------------- */
+
+.rwmb-label-radio-image img {
+    border: 3px solid #f9f9f9;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+	.rwmb-label-radio-image.selected img { border-color: #ccc; }
+
+.rwmb-radio-image { display: none; }

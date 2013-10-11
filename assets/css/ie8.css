@@ -1,0 +1,48 @@
+body.boxed .wrapper,
+body.boxed .container,
+body.boxed .revolution_slider,
+body.boxed .footer_first_outer,
+.container{
+	width: 926px;
+}
+
+body.boxed .container_inner,
+body.boxed .footer_inner,
+.container_inner,
+.header_top_inner,
+.footer_first_outer .footer_inner,
+.drop_down3 .second .inner2,
+.drop_down3 .second{
+	width: 846px;			
+}
+
+nav.main_menu ul li a{
+	padding: 0px 13px;
+}
+
+.drop_down3 .second div.mc{
+	width: 196px;
+}
+
+.slider_small_holder .bx-wrapper .bx-viewport ul li{
+	width: 209px !important;
+	margin-right: 3px !important;
+}
+
+.portfolio_holder_v2, 
+.portfolio_holder_v3,
+.portfolio_holder_v4{
+	width: 861px;
+}
+
+.portfolio_holder_v2 article {
+	width: 420.5px;
+}
+
+.portfolio_holder_v3 article {
+	width: 282px;
+}
+
+.portfolio_holder_v4 article {
+	width: 210.2px;
+}

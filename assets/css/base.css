@@ -1,0 +1,564 @@
+/* ADDITIONAL NOTES
+-----------------------------------------------------------------
+In this stylesheet, we are using 'em' unit values.
+Calculation is based on base font-size of 12px.
+Browser default = 16px
+html font size on this theme = 75%
+Therefore 75% of 16px = 12px (Base Font size)
+
+For example, heading font-size and line-height is calucalted as:
+
+font-size: 2.5em; {Required} 30px / {Base size} 12px = 2.5em
+line-height: 1.2; {Required} 36px / {Parent size} 30px = 1.2
+margin-bottom: 0.6em; {Required} 18px / {Parent size} 30px = 0.6em
+
+*/
+
+/* ---------------------------------------------------------------
+ * RESET
+ * (Inspired by E. Meyers)
+ * ------------------------------------------------------------ */
+	html, body, div, span, applet/Volumes/DATA/Sites/dev/wp-content/themes/sptheme-v2/assets/css/base.css, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	.special-quote {
+		quotes: none; }
+	.special-quote:before, .special-quote:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+		
+	/* Clearing floats */
+	.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+	
+	.clear {
+		clear: both;
+	}
+    
+
+/* ---------------------------------------------------------------
+ * TYPOGRAPHY
+ * Body, headings, links and basic styles
+ * ------------------------------------------------------------ */
+
+html {
+	/* font-size: 75%; */ /* Browser default = 16px, Hence, 16*75/100 = 12px (base font size) pxtoem.com */
+}
+
+body {
+	font: 13px/1.5em "Droid Sans", Arial, sans-serif;
+	color: #444;
+	background: #fff;
+	-webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+	/* -webkit-font-smoothing: antialiased; */ /* Fix for webkit rendering */
+	margin: 0;
+}
+
+/* Selecting color */
+::-moz-selection { background: #cc0000; color: #fff; text-shadow: none; }
+::selection { background: #cc0000; color: #fff; text-shadow: none; }
+
+/* Some basic settings */
+h1 { font-size: 32px;}
+h2 { font-size: 26px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; font-family: "Montserrat", Arial, sans-serif; color:#222; font-weight: 400;}
+/* Link */
+a, a > * {
+	color: #4d90fe;
+	text-decoration: none;
+	-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	   -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	    -ms-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	     -o-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	        transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+}
+
+a:hover, a > *:hover { color: #333; text-decoration: underline; }
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+	color: #000;
+}
+
+/* Text elements */
+
+p {
+	margin-bottom: 1.5em;
+}
+
+img{
+	vertical-align: top; /* Remove white space at bottom */
+}
+
+address {
+	font-style: italic;
+	display: block;
+	margin: 0 0 24px;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+nav ul,
+nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: square;
+}
+
+ul ul {
+	list-style: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ol ol {
+	list-style: upper-alpha;
+}
+
+ol ol ol {
+	list-style: lower-roman;
+}
+
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 1.5em 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 0.75em 1.5em;
+}
+
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+pre {
+	margin: 0 0 1.5em;
+	padding: 0.7272em 1.09em;
+	overflow: auto;
+	font-size: 0.9166em;
+	line-height: 1.5;
+	font-family: "Consolas", Courier New, Courier, monospace;
+	color: #333;
+	background: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+code,
+kbd,
+samp,
+var {
+	font-size: 0.9166em;
+	font-family: "Consolas", Courier New, Courier, monospace;
+}
+
+ins {
+	background: #ffffdd;
+	text-decoration: none;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+hr {
+	background: #efefef;
+	color: #efefef;
+	margin: 5px 0 25px;
+}
+
+	hr.dotted { border-style: dotted; }
+
+	p + hr { margin: 25px 0 20px; }
+
+blockquote {
+	background: #f8f8f8 url(../images/pull-quote-dark.png) no-repeat 17px 21px;
+	font-style: italic;
+	font-size: 15px;
+	line-height: 1.6;
+	margin: 15px 20px;
+	padding: 10px 10px 10px 55px;
+}
+
+	blockquote.simple {
+		background: none;
+		border-left: 2px solid #ddd;
+		color: #bbb;
+		font-size: 13px;
+		margin: 0;
+		padding: 0 0 0 10px;
+	}
+	
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	font-weight: normal;
+	text-align: left;
+	padding: 0.6666em 1em;
+	border: 1px solid #e5e5e5;
+}
+
+th {
+	background-color: #f9f9f9;
+	font-weight :bold;
+	color: #333;
+}
+
+tfoot th {
+	border-top: none;
+}
+
+caption {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+
+/* ---------------------------------------------------------------
+ * IMAGES
+ * align image, gallery and caption
+ * ------------------------------------------------------------ */
+/* Fluid images for posts, comments, and widgets */
+.entry-content img,
+.entry-summary img,
+.comment-content img,
+.widget img,
+.wp-caption {
+	max-width: 100%;
+}
+
+/* Make sure images with WordPress-added height and width attributes are scaled correctly. */
+.entry-content img,
+.entry-summary img,
+.comment-content img[height],
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto;
+}
+
+img.size-full,
+img.size-large,
+img.wp-post-image {
+	height: auto;
+	max-width: 100%;
+}
+
+/* Images align */
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignleft {
+	margin: 5px 20px 5px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 10px 5px 0;
+}
+
+img.alignright {
+	margin: 5px 0 5px 20px;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 5px 10px;
+}
+
+img.aligncenter {
+	margin: 5px auto;
+}
+
+img.alignnone {
+	margin: 5px 0;
+}
+
+.wp-caption .wp-caption-text,
+.entry-caption,
+.gallery-caption {
+	color: #220e10;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+img.wp-smiley,
+.rsswidget img {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.wp-caption.alignleft + ul,
+.wp-caption.alignleft + ol  {
+	list-style-position: inside;
+}
+
+/* ---------------------------------------------------------------
+ * FORM
+ * Form styles.
+ * ------------------------------------------------------------ */
+
+/* Reset form field */ 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: 0;
+}
+
+select,
+button,
+input,
+textarea {
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: normal;
+	font-family: inherit;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="color"] {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+} 
+/* End Reset form field */ 
+
+form {
+	position: relative;
+	margin: 0 0 1.5em;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"] {
+	width: auto;
+	max-width: 100%;
+	color: inherit;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+	margin: 0;
+	padding: 0.75em 0.5em;
+	border: 1px solid #e0e0e0;
+	/* height: 3em; */
+	vertical-align: middle;
+}
+
+textarea {
+	min-height: 50px;
+	height: auto;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+	outline: 0;
+	border-color: #ccc;
+}
+
+select {
+	width: auto;
+	max-width: 100%;
+	padding: 0.3em;
+	border: 1px solid #ccc;
+	background: #fff url(../images/dropdown-arrow.png) no-repeat right center;
+}
+
+optgroup {
+	font-family: inherit;
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+}
+
+optgroup option {
+	padding-left: 0.5em;
+}
+
+input[type="checkbox"] {
+	display: inline;
+	margin-right: 0.333em;
+	vertical-align: middle;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"]{
+	padding:0.75em 0.5em;
+	font-size: 1em;
+	line-height: 1.5;
+	/* height: 3em; */
+	font-weight: normal;
+	color: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+	background-color: #4d90fe;
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient(center top , #4d90fe, #4787ed);
+	background-image: -moz-linear-gradient(center top , #4d90fe, #4787ed);
+	background-image: -ms-linear-gradient(center top , #4d90fe, #4787ed);
+	background-image: -o-linear-gradient(center top , #4d90fe, #4787ed);
+	background-image: linear-gradient(center top , #4d90fe, #4787ed);
+}
+
+button:hover,
+.menu-toggle:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+article.post-password-required input[type=submit]:hover {
+	color: #fff;
+	background-color: #357ae8;
+	border-color: #bbb;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient(center top , #4d90fe, #357ae8);
+	background-image: -moz-linear-gradient(center top , #4d90fe, #357ae8);
+	background-image: -ms-linear-gradient(center top , #4d90fe, #357ae8);
+	background-image: -o-linear-gradient(center top , #4d90fe, #357ae8);
+	background-image: linear-gradient(center top , #4d90fe, #357ae8);
+}
+
+button:active,
+.menu-toggle:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+	color: #fff;
+	background-color: #357ae8;
+	border-color: #2f5bb7;
+	background-repeat: repeat-x;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+	color: #7d7b6d;
+}
+
+:-moz-placeholder {
+	color: #7d7b6d;
+}
+
+::-moz-placeholder {
+	color: #7d7b6d;
+}
+
+:-ms-input-placeholder {
+	color: #7d7b6d;
+}

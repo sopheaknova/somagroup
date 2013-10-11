@@ -1,0 +1,9 @@
+span.mce_columns {
+background-image: url('../img/ed_columns.png')!important;
+background-repeat: no-repeat!important;
+background-position: 50% 50% !important;
+width: 80px !important;
+}
+a.mce_columns{
+	width: 80px !important;
+}

@@ -1,0 +1,304 @@
+/*
+Theme Name: Soma Group
+Description: Used to style the TinyMCE editor.
+*/
+
+html {
+	font-size: 100%;
+}
+
+/*html .mceContentBody {
+	max-width: 625px;
+}*/
+
+body {
+	font: 13px/1.5em "Droid Sans", Arial, sans-serif;
+	color: #444;
+	background: #fff;
+}
+
+/* Some basic settings */
+h1 { font-size: 32px;}
+h2 { font-size: 26px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; font-family: "Montserrat", Arial, sans-serif; color:#222; font-weight: 400;}
+/* Link */
+a, a > * {
+	color: #4d90fe;
+	text-decoration: none;
+	-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	   -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	    -ms-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	     -o-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	        transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+}
+
+a:hover, a > *:hover { color: #333; text-decoration: underline; }
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+	color: #000;
+}
+
+/* Text elements */
+
+p {
+	margin-bottom: 1.5em;
+}
+
+img{
+	vertical-align: top; /* Remove white space at bottom */
+}
+
+address {
+	font-style: italic;
+	display: block;
+	margin: 0 0 24px;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+nav ul,
+nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: square;
+}
+
+ul ul {
+	list-style: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ol ol {
+	list-style: upper-alpha;
+}
+
+ol ol ol {
+	list-style: lower-roman;
+}
+
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 1.5em 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 0.75em 1.5em;
+}
+
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+pre {
+	margin: 0 0 1.5em;
+	padding: 0.7272em 1.09em;
+	overflow: auto;
+	font-size: 0.9166em;
+	line-height: 1.5;
+	font-family: "Consolas", Courier New, Courier, monospace;
+	color: #333;
+	background: #f9f9f9;
+	border: 1px solid #e5e5e5;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+code,
+kbd,
+samp,
+var {
+	font-size: 0.9166em;
+	font-family: "Consolas", Courier New, Courier, monospace;
+}
+
+ins {
+	background: #ffffdd;
+	text-decoration: none;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+hr {
+	background: #efefef;
+	color: #efefef;
+	margin: 5px 0 25px;
+}
+
+	hr.dotted { border-style: dotted; }
+
+	p + hr { margin: 25px 0 20px; }
+
+blockquote {
+	background: #f8f8f8 url(../images/pull-quote-dark.png) no-repeat 17px 21px;
+	font-style: italic;
+	font-size: 15px;
+	line-height: 1.6;
+	margin: 15px 20px;
+	padding: 10px 10px 10px 55px;
+}
+
+	blockquote.simple {
+		background: none;
+		border-left: 2px solid #ddd;
+		color: #bbb;
+		font-size: 13px;
+		margin: 0;
+		padding: 0 0 0 10px;
+	}
+	
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	font-weight: normal;
+	text-align: left;
+	padding: 0.6666em 1em;
+	border: 1px solid #e5e5e5;
+}
+
+th {
+	background-color: #f9f9f9;
+	font-weight :bold;
+	color: #333;
+}
+
+tfoot th {
+	border-top: none;
+}
+
+caption {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+
+/* =Alignment
+-------------------------------------------------------------- */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 0 1.5em 1.5em 0;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: 0 0 1.5em 1.5em;
+}
+.aligncenter {
+	display: block;
+	margin-bottom: 1.5em;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+img,
+.editor-attachment {
+	border: 0;
+	max-width: 100%;
+}
+img.size-full {
+	width: auto/9; /* Prevent stretching of full-size images in IE8 */
+}
+img[class*="wp-image-"] {
+	height: auto;
+	max-width: 100%;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.mceWPnextpage {
+	border-radius: 0;
+	box-shadow: none;
+}
+img.wp-smiley {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	background: transparent;
+	border: none;
+	margin: 0;
+	padding: 4px;
+	text-align: left;
+}
+.wp-caption-dt {
+	margin: 0;
+}
+.wp-caption .wp-caption-text,
+.wp-caption-dd {
+	color: #777;
+	font-style: italic;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0 0 1.5em;
+}
