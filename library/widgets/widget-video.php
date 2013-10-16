@@ -15,7 +15,7 @@ class sp_widget_video extends WP_Widget {
 	*/
 	function __construct() {
 		$id     = 'sp-widget-video';
-		$prefix = THEME_NAME . ': ';
+		$prefix = SP_THEME_NAME . ': ';
 		$name   = '<span>' . $prefix . __( 'Video', 'sptheme_widget' ) . '</span>';
 		$widget_ops = array(
 			'classname'   => 'sp-widget-video',

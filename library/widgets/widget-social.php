@@ -5,7 +5,7 @@ class sp_widget_social extends WP_Widget {
 	function __construct() {
 		
 		$id     = 'sp-widget-social-icons';
-		$prefix = THEME_NAME . ': ';
+		$prefix = SP_THEME_NAME . ': ';
 		$name   = '<span>' . $prefix . __( 'Social Icons', 'sptheme_widget' ) . '</span>';
 		$widget_ops = array(
 			'classname'   => 'sp-widget-social-icons',

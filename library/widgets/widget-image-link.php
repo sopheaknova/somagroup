@@ -6,18 +6,18 @@
 *****************************************************
 */
 
-class sp_widget_text_image extends WP_Widget {
+class sp_widget_image_link extends WP_Widget {
 	/*
 	*****************************************************
 	*      widget constructor
 	*****************************************************
 	*/
 	function __construct() {
-		$id     = 'sp-widget-text-image';
+		$id     = 'sp-widget-image-link';
 		$prefix = SP_THEME_NAME . ': ';
-		$name   = '<span>' . $prefix . __( 'Text and Image', 'sptheme_widget' ) . '</span>';
+		$name   = '<span>' . $prefix . __( 'Image Link', 'sptheme_widget' ) . '</span>';
 		$widget_ops = array(
-			'classname'   => 'sp-widget-text-image',
+			'classname'   => 'sp-widget-image-link',
 			'description' => __( 'Arbitrary link with a simple image', 'sptheme_widget' )
 			);
 		$control_ops = array();
@@ -28,12 +28,12 @@ class sp_widget_text_image extends WP_Widget {
 		wp_enqueue_style( 'thickbox' );
         wp_enqueue_script( 'thickbox' );
         wp_enqueue_script( 'media-upload' );
-        add_action( 'admin_print_footer_scripts', array( &$this, 'add_script_textimage' ), 999 );
+        add_action( 'admin_print_footer_scripts', array( &$this, 'add_script_image_link' ), 999 );
 		
 	} // /__construct
 	
     
-    function add_script_textimage()
+    function add_script_image_link()
     {
         ?>   
         <script type="text/javascript">                 
@@ -94,9 +94,6 @@ class sp_widget_text_image extends WP_Widget {
                 <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" value="<?php echo $instance['link']; ?>" />
             </label>
         </p>
-        <p>
-        <textarea id="<?php echo $this->get_field_id( 'txt' ); ?>" name="<?php echo $this->get_field_name( 'txt' ); ?>" class="widefat" cols="20" rows="16"><?php echo $instance['txt']; ?></textarea>
-        </p>
         
         <?php
     }
@@ -107,7 +104,6 @@ class sp_widget_text_image extends WP_Widget {
 		
 		$title = apply_filters('widget_title', $instance['title'] );
 		$link = esc_attr($instance['link']);
-		$txt = $instance['txt'];
 		$img_src = $instance['image'];
 		
 		echo $before_widget;                   
@@ -128,8 +124,6 @@ class sp_widget_text_image extends WP_Widget {
 			echo apply_filters( 'widget_text', $widget_body );
 			
 		endif;
-		
-		echo $txt;
         
         echo $after_widget;
     }                     
@@ -140,7 +134,6 @@ class sp_widget_text_image extends WP_Widget {
 		$instance['title'] = strip_tags( $new_instance['title'] );
         $instance['image'] = $new_instance['image'];
         $instance['link'] = $new_instance['link'];
-		$instance['txt'] = $new_instance['txt'];
         return $instance;
     }
     

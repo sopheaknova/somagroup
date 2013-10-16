@@ -97,7 +97,6 @@ jQuery( document ).ready( function($) {
 		pause:bxslider_opt.pause,
 		autoHover:true,
 		auto: true
-		
 	});
 	
 	// Single post slideshow with Flexslider

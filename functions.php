@@ -46,7 +46,7 @@ if ( ! isset( $cp_menu_position ) )
 //Theme settings
 require_once( SP_BASE_DIR . 'library/functions/setup-theme.php' );
 require_once( SP_BASE_DIR . 'library/functions/theme-functions.php');
-//require_once( SP_BASE_DIR . 'library/functions/aq_resizer.php');
+require_once( SP_BASE_DIR . 'library/functions/aq_resizer.php');
 
 // Add shortcodes
 require_once( SP_BASE_DIR . 'library/shortcode/shortcodes.php');

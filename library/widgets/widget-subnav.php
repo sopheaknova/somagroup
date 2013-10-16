@@ -15,7 +15,7 @@ class sp_widget_subnav extends WP_Widget {
 	*/
 	function __construct() {
 		$id     = 'sp-widget-subnav';
-		$prefix = THEME_NAME . ': ';
+		$prefix = SP_THEME_NAME . ': ';
 		$name   = '<span>' . $prefix . __( 'Sub Navigation', 'sptheme_widget' ) . '</span>';
 		$widget_ops = array(
 			'classname'   => 'sp-widget-subnav',

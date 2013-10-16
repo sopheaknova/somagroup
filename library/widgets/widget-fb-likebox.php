@@ -15,7 +15,7 @@ class sp_widget_fb_likebox extends WP_Widget {
 	*/
 	function __construct() {
 		$id     = 'sp-widget-fb-likebox';
-		$prefix = THEME_NAME . ': ';
+		$prefix = SP_THEME_NAME . ': ';
 		$name   = '<span>' . $prefix . __( 'Facebook Like Box', 'sptheme_widget' ) . '</span>';
 		$widget_ops = array(
 			'classname'   => 'sp-widget-fb-likebox',

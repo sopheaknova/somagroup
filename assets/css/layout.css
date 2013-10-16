@@ -40,13 +40,13 @@
 .container{
 	margin: 0 auto;
 	position: relative;
-	width:940px; /* 920px */
+	width:920px;
 }
 
 	/* -------------------------------------------------- */
 	/*	Main
 	/* -------------------------------------------------- */
-	#main{width:620px;} /* 600px */
+	#main{width:620px;}
 		
 		.full-width #main, .home #main{
 			width: inherit;
@@ -61,7 +61,7 @@
 		}
 		
 	#sidebar {
-		width: 300px;
+		width: 280px;
 	}
 	
 	.sidebar-left #sidebar { float: left; }
@@ -76,7 +76,7 @@
 		background-color: #66ccff;
 		border-bottom: 1px solid #707070;
 		text-align: center;
-		z-index: 20;
+		z-index: 99;
 	}
 	
 	.primary-nav .container {
@@ -540,6 +540,39 @@ border-top: 2px solid #f5ad00;
 	}
 	
 	
+	/* -------------------------------------------------- */
+	/*	Widget quick contact
+	/* -------------------------------------------------- */
+	.widget.sp-widget-quick-contact ul{margin-top: 7px;}
+	.widget.sp-widget-quick-contact li{
+		background: none;
+		padding: 2px 0;
+		border-bottom: none;
+	}
+	.widget.sp-widget-quick-contact li:hover{
+		background: none;
+	}
+	.sp-widget-quick-contact li .address, .sp-widget-quick-contact li .tel, 
+	.sp-widget-quick-contact li .fax, .sp-widget-quick-contact li .email{
+		display: inline-block;
+		background: url(../images/icon-contact.png) 0 3px no-repeat;
+		width:16px;
+		height: 16px;
+		margin-right: 3px;
+	}
+	.sp-widget-quick-contact li .email{
+		background-position: -16px 3px;
+	}
+	
+	.sp-widget-quick-contact li .fax{
+		background-position: -33px 3px;
+	}
+	
+	.sp-widget-quick-contact li .tel{
+		background-position: -50px 3px;
+	}
+	
+	
 /* ---------------------------------------------------------------
  * BLOG
  * blog post styles
@@ -708,7 +741,6 @@ a.rss-cat-icon{
  * ------------------------------------------------------------ */
 
 #footer {
-	text-align: center;
 	background: #f5ad00;
 	color: #996600;
 }
@@ -726,6 +758,20 @@ a.rss-cat-icon{
 	color: #ffffcc;
 }
 
+#footer-sidebar .widget{
+	width:300px;
+	float: left;
+	margin-right: 20px;
+}
+	#footer-sidebar .widget:last-child{
+		margin-right: 0;
+	}
+	
+	#footer-sidebar .widget h3{
+		color:#614400;
+		font-size: 15px;
+	}
+
 	.footer-nav li{
 		display: inline-block;
 	}
@@ -733,6 +779,7 @@ a.rss-cat-icon{
 	.copyright{
 		color:#ffffcc;
 	}
+	.footer-nav, .copyright{text-align: center;}
 
 
 /* ---------------------------------------------------------------
@@ -781,13 +828,18 @@ a.rss-cat-icon{
  * ------------------------------------------------------------ */		
 
 /*Home Bxslider*/
-#home-slideshow {border-top:1px solid #cfcfcf;}
+#home-slideshow {
+	border-top:1px solid #cfcfcf;
+	background: url(../images/bg-header.jpg) center top repeat-x;
+}
 #home-slideshow .bx-wrapper{
 	margin-bottom: 30px;
 }
 #home-slideshow .bx-viewport{
 	box-shadow: none;
 	border: none;
+	left: 0;
+	background: transparent;
 }
 	.home-bxslider{
 		margin: 0;
