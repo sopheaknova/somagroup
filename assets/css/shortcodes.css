@@ -1,20 +1,12 @@
-/* 3 styles for portfolio */
-ul.portfolio{
-	list-style: none;
-	padding: 0;
-	margin: 0;
+/* Read more */	
+.more { 
+	color:#222;
+	background: url(../images/arrow-right-dark.png) 100% 5px no-repeat;
+	padding-right: 12px;
 }
-	ul.portfolio li {
-		clear:both;
-		padding: 20px 0;
-		border-bottom: 5px solid #F0F0F0;
-		overflow: hidden;
-	}
-	
-	ul.portfolio .port-col1-title{
-		font-size: 1.8em;
-	}
-	
+a.more:hover { 
+	background: url(../images/arrow-right-red.png) 100% 5px no-repeat;
+}
 
 /* Highlight text */	
 .hdark { background-color:#cccccc }
@@ -205,4 +197,68 @@ h3.active a:hover {
 	width: 100%;
 }
 
-	.tab-content { padding: 20px; }	
+	.tab-content { padding: 12px; }	
+	
+/* Tabs content verticle */
+.tabs-nav-ver {
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	width: 29.8%;
+	float: left;
+	margin-top: 10px;
+}
+
+	.tabs-nav-ver li {
+		line-height: 32px;
+		margin: 1px 0;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+	}
+
+		.tabs-nav-ver li.active { line-height: 31px; }
+
+		.tabs-nav-ver li a {
+			background: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-bottom: 1px solid #cccccc;
+			border-left: 1px solid #cccccc;
+			border-top:1px solid #cccccc;
+			font-family: "Montserrat", Arial, sans-serif;
+			color: #222;
+			display: block;
+			letter-spacing: 0;
+			outline: none;
+			padding: 5px 16px;
+			text-decoration: none;
+			text-shadow: 0 1px 0 #fff;
+		
+			border-top-left-radius:3px;
+			-webkit-border-top-left-radius: 3px;
+			-moz-border-top-left-radius: 3px;
+			
+			border-bottom-left-radius:3px;
+			-webkit-border-bottom-left-radius: 3px;
+			-moz-border-bottom-left-radius: 3px;
+		}
+
+		.tabs-nav-ver li a:hover { background: #f0f0f0; }
+
+		.tabs-nav-ver li a:hover, .tabs-nav li.active a { color: #CC0000; }
+		
+			.tabs-nav-ver li.active a  {
+				background: #fff;
+				border-right: 2px solid #fff;
+				color: #CC0000;
+			}
+
+.tabs-container-ver {
+	border: 1px solid #cccccc;
+	margin: 0 0 20px -1px;
+	width: 69.8%;
+	float: left;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

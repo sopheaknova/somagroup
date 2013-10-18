@@ -282,13 +282,20 @@ function sp_last_posts_cat($numberOfPosts = 5 , $thumb = true , $cats = 1){
 		
 ?>
 	<ul>
-<?php foreach($lastPosts as $post): setup_postdata($post); ?>
+	<?php 
+	  foreach($lastPosts as $post): setup_postdata($post); 
+		$img_url = sp_post_image('widget');
+		$image = aq_resize($img_url, 60, 60, true);	
+		if (empty($image)) $image = $img_url;		
+	?>
 		<li>
+			<?php if ($image) { ?>
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>" title="<?php printf( __( 'Permalink to %s', SP_TEXT_DOMAIN ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-				<img src="<?php echo sp_post_image('widget'); ?>" width="60" height="60" />
+				<img src="<?php echo $image; ?>" width="60" height="60" />
 	            </a>
 			</div><!-- post-thumbnail /-->
+			<?php } ?>
 			<p><a href="<?php the_permalink(); ?>"><?php the_title();?></a></p>
 			<div class="entry-meta"><?php echo sp_meta_mini(); ?></div>
 		</li>
@@ -412,7 +419,7 @@ function sp_excerpt_string_length( $str_length = 130 ) {
 		$excerpt = get_the_content();
 		}
 		
-		echo wp_html_excerpt($excerpt,$str_length) . '...';
+		return wp_html_excerpt($excerpt,$str_length) . '...';
 }
 
 /* ---------------------------------------------------------------------- */

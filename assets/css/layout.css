@@ -316,6 +316,62 @@ border-top: 2px solid #f5ad00;
 		font-weight: bold;
 	}
 	
+	/* -------------------------------------------------- */
+	/*	Services highlight style icons
+	/* -------------------------------------------------- */
+	.service-items{margin-top: 10px; margin-bottom: 10px;}
+	.service-items img.icons{
+		vertical-align: bottom;
+		margin-right: 10px;
+	}
+	.service-items p{
+		margin-bottom: 0.8em;
+	}
+	
+	/* -------------------------------------------------- */
+	/*	Latest news
+	/* -------------------------------------------------- */
+	#latest-news{
+		padding-left: 0;
+		list-style: none;
+	}
+	#latest-news li{
+		padding: 10px 0;
+		border-top:1px solid #CCCCCC;
+	}
+	#latest-news li:first-child{
+		padding: 0;
+		padding-bottom: 10px;
+		border-top: none;
+	}
+	#latest-news .post-thumbnail{
+		margin-bottom: 10px;
+	}
+	#latest-news .entry-meta{
+		margin-bottom: 0;
+		font-size: 11px;
+	}
+	#latest-news p{
+		margin-top: 3px;
+	}
+	
+	/* -------------------------------------------------- */
+	/*	Section title
+	/* -------------------------------------------------- */
+	.section-title{
+		border-bottom:1px solid #CC0000; 
+		margin-bottom: .8em;
+		margin-top: 20px;
+	}
+	.section-title h4 {
+		color: #222;
+		font-weight: 400;
+		display: inline-block;
+		margin: 0;
+		padding: 4px 0;
+		border-top:4px solid #CC0000;
+	}
+	
 /* ---------------------------------------------------------------
  * COLUMNS
  * Grids layout
@@ -743,6 +799,7 @@ a.rss-cat-icon{
 #footer {
 	background: #f5ad00;
 	color: #996600;
+	border-top: 4px solid #bebebe;
 }
 
 #footer .container {
@@ -861,6 +918,12 @@ a.rss-cat-icon{
 			font-weight: 400;
 			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 		}
+		.home-bxslider .headline span.title a{
+			color: #fff;
+		}
+		.home-bxslider .headline span.title a:hover{
+			color: #222;
+		}
 		.home-bxslider .headline span.desc{
 			background-color: #fff;
 			color: #222;
@@ -868,6 +931,19 @@ a.rss-cat-icon{
 		.home-bxslider .headline span.desc p{
 			margin: 0;
 		}
+
+/*Carousel bxslider*/
+#partner .bx-wrapper{
+	margin-bottom: 20px;
+}
+#partner .bx-wrapper .bx-viewport{
+	box-shadow: none;
+}
+.carousel-partner{
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
 
 /*Flexslider customize*/
 .flexslider{

@@ -26,7 +26,7 @@ function register_shortcodes_button( $buttons ) {
 	//array_push( $buttons, "highlight", "notifications", "buttons", "divider", "toggle", "tabs", "accordian", "dropcaps", "video", "soundcloud", "columns" );
 	if ( (get_post_type() == 'page') || (get_post_type() == 'post') )
 	{
-		array_push( $buttons, "highlight", "notifications", "buttons", "divider", "toggle", "tabs", "accordian", "dropcaps", "video", "soundcloud", "portfolio-grid", "columns" );	
+		array_push( $buttons, "divider", "toggle", "tabs", "accordian", "dropcaps", "section-title", "video", "soundcloud", "carousel", "services-grid", "latest-blog", "columns" );	
 	}
     return $buttons;
 }
@@ -56,10 +56,8 @@ function sp_sc_formatter($content)
 	return $new_content;
 }
 
-/*
 remove_filter('the_content', 'wpautop');
 remove_filter('the_content', 'wptexturize');
-*/
 
 add_filter('the_content', 'sp_sc_formatter', 99);
 
@@ -162,6 +160,11 @@ function toggle_shortcode( $atts, $content = null ) {
 // Tabs container
 function content_tabgroup_sc( $atts, $content = null ) {
 
+	@extract($atts);
+	
+	if($type== "vertical" ) $type= '-ver';
+	else $type= '';
+
 	if( !$GLOBALS['tabs_groups'] )
 		$GLOBALS['tabs_groups'] = 0;
 		
@@ -182,7 +185,7 @@ function content_tabgroup_sc( $atts, $content = null ) {
 
 		}
 
-		$return = "\n". '<ul class="tabs-nav">' . implode( "\n", $tabs ) . '</ul>' . "\n" . '<div class="tabs-container">' . implode( "\n", $panes ) . '</div>' . "\n";
+		$return = "\n". '<ul class="tabs-nav'. $type .'">' . implode( "\n", $tabs ) . '</ul>' . "\n" . '<div class="tabs-container'. $type .'">' . implode( "\n", $panes ) . '</div>' . "\n";
 	}
 
 	return $return;
@@ -219,7 +222,7 @@ function accordion_content_sc( $atts, $content = null ) {
 	}
 	add_shortcode('accordion', 'accordion_content_sc');
 
-///Dropcaps
+//Dropcaps
 function dropcaps($atts, $content = null)
 {
 	extract(shortcode_atts(array(
@@ -260,21 +263,127 @@ function soundcloud_sc( $atts, $content = null ) {
 }
 add_shortcode('spsoundcloud', 'soundcloud_sc');
 
-//Portfolio Grid
-function portfolio_grid_sc( $atts, $content = null ) {
-	
-	extract( shortcode_atts ( array(
-				'column' 			=> '',
-				'posts_per_page'	=> ''
-			), $atts ) );
-			
-	$output = sp_portfolio_grid($column, $posts_per_page);	
-	
-	return $output;
-		
-}
-add_shortcode('sp_portfolio_grid', 'portfolio_grid_sc');
+//Services highlight
+function services_highlight_shortcode( $atts, $content = null ) {
 
+		extract( shortcode_atts( array(
+			'title'      => '',
+			'services_content' => '',
+			'icon_url' => '',
+			'link_to_page' => ''
+		), $atts ) );
+		
+		$output = '<div class="service-items">';
+		$output .= '<h5><a href="' . $link_to_page . '"><img class="icons" src="' . $icon_url . '" />'  . esc_attr( $title ) .  '</a></h5>';
+		$output .= '<p>' . $content . '</p>';  
+		$output .= '<a class="more" href="' . $link_to_page . '">' . __('Learn more', SP_TEXT_DOMAIN)  .  '</a>';
+		$output .= '</div>';
+
+		return $output;
+	
+	}
+	add_shortcode('services', 'services_highlight_shortcode');
+
+//Carousel partner
+function sp_carousel_partner( $atts, $content = null ) {
+	
+	extract(shortcode_atts(array(
+					), $atts));
+					
+	$args = array (
+	                'post_type'			=> 'partner',
+	                'posts_per_page'	=> 5
+	            );
+	   
+	$output = '';            
+	            
+    $post_query = new WP_Query($args);
+    if ($post_query->have_posts()) :
+    	$output .= '<div id="partner">';
+    	$output .= '<ul class="carousel-partner">';
+		while ( $post_query->have_posts() ) : $post_query->the_post();
+			$img_url = sp_post_thumbnail('large');
+			$image = aq_resize($img_url, 300, 150, true); 
+			$output .= '<li class="slide"><img src="' . $image . '" alt="' . get_the_title() . '"/></li>';
+		endwhile;
+		$output .= '</ul>';
+		$output .= '</div>';
+		
+    else: 
+		$output .= '<p>' . __( 'Sorry, There are no slide, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p>';
+    endif;
+    
+    return $output;
+			
+}
+
+add_shortcode('carousel_partner', 'sp_carousel_partner');	
+	
+//Latest Blog
+function sp_latest_blog( $atts, $content = null ) {
+
+	extract( shortcode_atts( array(
+      'category' => '',
+      'thumbnail' => '',
+	  'description' => '',
+	  'post_number' => 1
+      ), $atts ) );
+      
+    $output = '<ul id="latest-news">';
+     
+    $args = array (
+	                'cat'				=> $category,
+	                'posts_per_page'	=> $post_number
+	            );
+    $post_query = new WP_Query($args);
+    if ($post_query->have_posts()) :
+		while ( $post_query->have_posts() ) : $post_query->the_post();
+		
+		$img_url = sp_post_image('medium');
+		$image = aq_resize($img_url, 280, 140, true);
+		
+		$output .= '<li>';
+		
+		if ($image && $thumbnail == 'true'){
+		$output .= '<div class="post-thumbnail">';
+		$output .= '<a href="'.get_permalink().'"><img src="' . $image . '" /></a>';
+		$output .= '</div>';
+		}
+		
+		$output .= '<h6><a href="' . get_permalink() . '">' . get_the_title() . '</a></h6>';
+		$output .= '<div class="entry-meta">' . get_the_date() . '</div>';
+		
+		if ($description == 'true'){
+		$output .= '<p>' . sp_excerpt_string_length(125) . '</p>';	
+		$output .= '<a class="more" href="' . get_permalink() . '">' . __('Read more', SP_TEXT_DOMAIN) . '</a>';
+		}
+		
+		$output .= '</li>';
+		endwhile;
+    else: 
+		$output .= '<li><p>' . __( 'Sorry, There are no slide, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p></li>';
+    endif;  
+    	$output .= '</ul><!-- #latest-news -->';
+    	
+   wp_reset_postdata();
+    
+    return $output;
+	  
+}
+add_shortcode('latest_blog', 'sp_latest_blog');	
+
+//Section title
+function sp_section_title($atts, $content = null)
+{
+	extract(shortcode_atts(array(
+					), $atts));
+
+	$output = "<div class='section-title' ><h4>" . do_shortcode($content) . "</h4></div>";
+
+	return $output;
+}
+
+add_shortcode('section_title', 'sp_section_title');
 
 /* ---------------------------------------------------------------------- */
 /*	Columns

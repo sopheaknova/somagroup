@@ -56,10 +56,14 @@ jQuery( document ).ready( function($) {
 
 	(function() {
 
-		var $tabsNav    = $('.tabs-nav'),
+		var $tabsNav    = $('.tabs-nav, .tabs-nav-ver'),
 			$tabsNavLis = $tabsNav.children('li'),
 			$tabContent = $('.tab-content');
 
+		if ($tabsNav.hasClass('tabs-nav-ver')){
+			$tabs_height = $('.tabs-nav-ver').height() + 30;
+			$('.tabs-nav-ver').next().children('.tab-content').css({"min-height":$tabs_height});
+		}
 		$tabsNav.each(function() {
 			var $this = $(this);
 
@@ -84,5 +88,6 @@ jQuery( document ).ready( function($) {
 		});
 
 	})();
+	
 																																	  
 } )

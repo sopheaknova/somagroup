@@ -99,6 +99,23 @@ jQuery( document ).ready( function($) {
 		auto: true
 	});
 	
+	// Partner carousel
+	$('.carousel-partner').bxSlider({
+	    slideWidth: 165,
+	    minSlides: 2,
+	    maxSlides: 10,
+	    slideMargin: 20,
+	    auto: true,
+	    controls: true,
+	    onSliderLoad: function () {
+			$('#partner .bx-controls-direction, #partner .bx-default-pager').hide();
+			$('#partner .bx-wrapper').hover(
+				function () { $('#partner .bx-controls-direction, #partner .bx-default-pager').fadeIn(300); },
+				function () { $('#partner .bx-controls-direction, #partner .bx-default-pager').fadeOut(300); }
+			);
+		}	
+	  });
+	
 	// Single post slideshow with Flexslider
 	$('.flexslider').flexslider();
 	

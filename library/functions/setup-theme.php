@@ -61,6 +61,7 @@ function sp_theme_setup() {
 
 	// Add custom image sizes
 	add_image_size( 'slideshow', 9999, 430, true );
+	add_image_size( 'widget', 60, 60, true );
 
 
 }

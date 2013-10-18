@@ -155,21 +155,62 @@
              image:  url +  "../../img/ed_dropcaps.png"
             });
             
-            //Portfolio Grid
-			ed.addCommand('portfolio-grid', function() {
+            //Section title
+			ed.addButton('section-title', {
+            title : 'Section title',
+                onclick : function() {
+					
+                    ed.focus();
+					ed.selection.setContent(' [section_title] Section title [/section_title] ');
+                   
+                },
+             image:  url +  "../../img/ed_section_title.png"
+            });
+            
+            //Services Grid
+			ed.addCommand('services-grid', function() {
 				ed.windowManager.open({
-					file : url +  '../../shortcodes/portfolio-grid.php'+sp_wpml_lang,
+					file : url +  '../../shortcodes/services-grid.php'+sp_wpml_lang,
 					width : 350,
-					height : 280,
+					height : 360,
 					inline : 1
 				});
 			
 			});
 						
-			ed.addButton('portfolio-grid', {
-            title : 'Portfolio Grid',
-               cmd : 'portfolio-grid',
-               image:  url +  "../../img/ed_portfolio.png"
+			ed.addButton('services-grid', {
+            title : 'Services Grid',
+               cmd : 'services-grid',
+               image:  url +  "../../img/ed_services.png"
+            });
+            
+            //Latest blog
+			ed.addCommand('latest-blog', function() {
+				ed.windowManager.open({
+					file : url +  '../../shortcodes/latest-blog.php'+sp_wpml_lang,
+					width : 350,
+					height : 240,
+					inline : 1
+				});
+			
+			});
+						
+			ed.addButton('latest-blog', {
+            title : 'Latest News and Events',
+               cmd : 'latest-blog',
+               image:  url +  "../../img/ed_blog.png"
+            });
+            
+            //Carousel
+			ed.addButton('carousel', {
+            title : 'Add partner carousel',
+                onclick : function() {
+					
+                    ed.focus();
+					ed.selection.setContent(' [carousel_partner]');
+                   
+                },
+             image:  url +  "../../img/ed_carousel.png"
             });
 			
         },
@@ -188,11 +229,11 @@
 						a.addImmediate(b,"Column 1/2", ' [two_fourth]  [/two_fourth] ');
 						a.addImmediate(b,"Column 1/2 last", ' [two_fourth_last]  [/two_fourth_last] ');
 						a.addImmediate(b,"Column 1/3", ' [one_third]  [/one_third] ');
-						a.addImmediate(b,"Column 1/3 last", ' [one_third last=last]  [/one_third] ');
+						a.addImmediate(b,"Column 1/3 last", ' [one_third_last]  [/one_third_last] ');
 						a.addImmediate(b,"Column 1/4", ' [one_fourth]  [/one_fourth] ');
 						a.addImmediate(b,"Column 1/4 last", ' [one_fourth_last]  [/one_fourth_last] ');
 						a.addImmediate(b,"Column 2/3", ' [two_third]  [/two_third] ');
-						a.addImmediate(b,"Column 2/3 last", ' [two_third last=last]  [/two_third] ');
+						a.addImmediate(b,"Column 2/3 last", ' [two_third_last]  [/two_third_last] ');
 						a.addImmediate(b,"Column 3/4", ' [three_fourth]  [/three_fourth] ');
 						a.addImmediate(b,"Column 3/4 last", ' [three_fourth_last]  [/three_fourth_last] ');								
 						

@@ -63,7 +63,7 @@ global $smof_data;
             </div><!-- .primary-nav .wrap -->
 		</nav><!-- #main-nav -->
 		
-		<?php if (is_home()){ ?>
+		<?php if (is_home() || is_page_template('template-home.php')){ ?>
 		<!-- slideshow -->
 	    <div id="home-slideshow">
 	    <ul class="home-bxslider">
@@ -79,7 +79,7 @@ global $smof_data;
 			<li style="background:url(<?php echo sp_post_thumbnail('slideshow');?>) center top no-repeat;">
 			<div class="container">
 				<div class="headline">
-					<span class="title"><?php the_title(); ?></span><br />
+					<span class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span><br />
 					<span class="desc"><?php the_content(); ?></span>
 				</div>	
 			</div>
@@ -89,6 +89,7 @@ global $smof_data;
 	    else: 
 			echo "<li>" . __( 'Sorry, There are no slide, It is coming shortly.', SP_TEXT_DOMAIN ) . "</li>";
 	    endif;
+	    wp_reset_postdata();
 	    ?>  
 	    </ul>
 	    </div><!--/#headline-->
