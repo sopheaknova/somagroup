@@ -177,7 +177,7 @@ function sp_body_class( $classes ) {
 		}
 	}
 	
-	if ( is_category() || is_archive() )
+	if ( is_category() || is_archive() || is_search() )
 		$classes[] = 'sidebar-right';
 
 	if ( 'stretched' == $smof_data['layout_style'] ) {

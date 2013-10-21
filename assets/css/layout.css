@@ -31,10 +31,15 @@
 	margin: 0;
 	box-shadow: none;
 }
-
+#header{
+	background: url(../images/bg-header.jpg) center top repeat-x;
+}
 #content{
-	padding: 20px 0;
+	padding: 50px 0 30px;
 	min-height: 450px
+}
+.home #content{
+	padding-top: 20px;
 }
 
 .container{
@@ -42,6 +47,62 @@
 	position: relative;
 	width:920px;
 }
+	/* -------------------------------------------------- */
+	/*        Top utility bar
+	/* -------------------------------------------------- */
+	#utility-top .social-icons{
+		text-align: right;
+		padding: 2px;
+	}
+	#search-bar #searchform {
+		margin: 0;
+	}
+	
+	#search-bar {
+        float: right;
+        width: 100%;
+        max-width: 50%;
+        padding: 0.9166em 0;
+        color: #555;
+        text-align: right;
+	}
+	
+	#search-bar {
+        padding: 0;
+        max-width: 13.33em;
+	}
+	
+	#search-bar .searchbox {
+        padding: 2px;
+	}
+	
+	#search-bar #s{
+		width: 100%;
+        padding: 3px 24px 3px 6px;
+        height: 24px;
+        line-height: 24px;
+        background-color: #666;
+        color:#fff;
+        border: 1px solid #666;
+        background-image: url(../images/search-icon.png);
+        background-position: 93% 0;
+        background-repeat: no-repeat;
+	}
+	
+	#search-bar #s:hover{
+        background-position: 93% -22px;        
+    }
+	
+	#search-bar #searchsubmit{
+		position: absolute;
+	    right: 0;
+	    top: 0;
+	    visibility: hidden;
+	}
+	
+	.is-stretched #search-bar .searchbox {
+	        padding: 0.16666em 0;
+	}
 
 	/* -------------------------------------------------- */
 	/*	Main
@@ -61,7 +122,7 @@
 		}
 		
 	#sidebar {
-		width: 280px;
+		width: 230px;
 	}
 	
 	.sidebar-left #sidebar { float: left; }
@@ -316,6 +377,18 @@ border-top: 2px solid #f5ad00;
 		font-weight: bold;
 	}
 	
+	.slogan{
+		float: right;
+		text-align: right;
+		padding-right: 20px;
+	}
+	.slogan h5{
+		color: #71c9f1;
+		font-family: Georgia;
+		font-style: italic;
+		padding-top: 40px;
+	}
+	
 	/* -------------------------------------------------- */
 	/*	Services highlight style icons
 	/* -------------------------------------------------- */
@@ -323,6 +396,9 @@ border-top: 2px solid #f5ad00;
 	.service-items img.icons{
 		vertical-align: bottom;
 		margin-right: 10px;
+	}
+	.service-items a{
+		color: #222;
 	}
 	.service-items p{
 		margin-bottom: 0.8em;
@@ -370,6 +446,32 @@ border-top: 2px solid #f5ad00;
 		margin: 0;
 		padding: 4px 0;
 		border-top:4px solid #CC0000;
+	}
+	
+	/* -------------------------------------------------- */
+	/*	Contact
+	/* -------------------------------------------------- */
+	#c-map{
+		width:inherit;
+		height:450px;
+	}
+	form.contact-page .error{
+		background:none;
+		border:none;
+		padding:10px 0 0;
+		color:#fc0404;	
+		font-size: 11px;
+	}
+	form.contact-page{margin-top:10px;}
+	form.contact-page div{
+		margin-bottom: 7px;
+	}
+	form.contact-page label{
+		display: block;	
+		color:#aaaaaa;
+	}
+	form.contact-page input[type="text"]{
+		width: 100%;
 	}
 	
 /* ---------------------------------------------------------------
@@ -435,6 +537,7 @@ border-top: 2px solid #f5ad00;
 		margin: -0.666em 0 1.5em;
 		padding: 0;
 		list-style: none;
+		margin-top: 10px;
 	}
 	
 	.widget ul li {
@@ -500,7 +603,7 @@ border-top: 2px solid #f5ad00;
 		.social-icons.icon_16 img{width:16px; height:16px;}
 		
 	.social-icons.icon_flat{float:right; margin:4px 5px 0 0;}
-	.social-icons.icon_flat a{background:url(../images/socialicons/social-icons.png) no-repeat top left; width: 20px;height: 20px; opacity:.3;}
+	.social-icons.icon_flat a{background:url(../images/socialicons/social-icons.png) no-repeat top left; width: 20px;height: 20px; opacity:.3; display: inline-block;}
 	.social-icons.icon_flat a:hover{ opacity:.6;}
 	.icon_flat a.google-tieicon{background-position:-38px 1px;}
 	.icon_flat a.facebook-tieicon{background-position:left 0;}
@@ -634,9 +737,10 @@ border-top: 2px solid #f5ad00;
  * blog post styles
  * ------------------------------------------------------------ */
 h1.entry-title{
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.2;
-	margin: 0 0 8px;
+	margin: 0 0 20px;
+	color: #CC0000;
 }
 
 /* Post Meta */
@@ -704,8 +808,8 @@ a.rss-cat-icon{
 /* Blog Classic Style */
 .blog-classic h2.entry-title, .blog-classic-2 h2.entry-title{
 	margin-bottom: 0;
-	text-transform: uppercase;
-	font-size: 1.8em;
+	font-size: 20px;
+	line-height: 1.2;
 }
 
 

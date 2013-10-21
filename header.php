@@ -33,8 +33,21 @@ global $smof_data;
 </head>
 <body <?php body_class(); ?>>
 <div id="wrapper">
-		
+		 
         <header id="header" class="site-header" role="banner">
+		
+		<div id="utility-top">
+			<div class="container clearfix">
+			<div id="search-bar" role="complementary">
+				<?php get_search_form(); ?>
+			</div>
+			<?php
+			if ($smof_data['topbar_social'])
+                    sp_get_social( 'yes' , '24' , 'tooldown' , false );
+            ?>
+			</div><!-- end .container .clearfix -->
+		</div><!-- #utility-top .clearfix -->
+		
 		<div class="container clearfix">
             <div class="brand" role="banner">
                 <?php if( !is_singular() ) echo '<h1>'; else echo '<h2>'; ?>
@@ -51,7 +64,7 @@ global $smof_data;
             </div><!-- end .brand -->
             
             <div class="slogan">
-	            
+	            <h5><?php echo _e('The Future business of Cambodia', SP_TEXT_DOMAIN); ?></h5>
             </div> <!-- end .slogan -->
             
 		</div><!-- end .container .clearfix -->
@@ -93,6 +106,50 @@ global $smof_data;
 	    ?>  
 	    </ul>
 	    </div><!--/#headline-->
+	    <?php } ?>
+	    
+	    <?php if (is_page_template('template-contact.php')){ ?>
+	    <!--Map of casaankorhotel-->
+		<div id="map-wide">
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3.13"></script>
+		<script type="text/javascript">					
+		  jQuery(document).ready(function ($){
+		  
+		  		var latitude = <?php echo $smof_data['map_lat'];?>;
+		        var longitude = <?php echo $smof_data['map_long'];?>;
+		        var myLatlng = new google.maps.LatLng(latitude, longitude);
+		        var myOptions = {        
+		         scrollwheel: false,                                                 
+		         zoom: 16,
+		         center: myLatlng,
+		         mapTypeId: google.maps.MapTypeId.ROADMAP
+		        }
+		        var map = new google.maps.Map(document.getElementById("c-map"), myOptions);
+		        
+		        var image = new google.maps.MarkerImage("<?php echo SP_ASSETS_THEME;?>images/soma-marker.png",
+			        new google.maps.Size(133.0, 120.0),
+			        new google.maps.Point(0, 0),
+			        new google.maps.Point(66.0, 118.0)
+			    );
+			    var marker_shadow = new google.maps.MarkerImage("<?php echo SP_ASSETS_THEME;?>images/marker-shadow.png",
+			        new google.maps.Size(194.0, 120.0),
+			        new google.maps.Point(0, 0),
+			        new google.maps.Point(66.0, 118.0)
+			    );
+		        
+		        var marker = new google.maps.Marker({
+		                position: myLatlng,
+		                map: map,
+		                icon: image,
+		                shadow: marker_shadow,
+		                animation: google.maps.Animation.DROP,
+		                title:"<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>"
+		        });
+		        		        
+		  });
+		</script>
+		<div id="c-map"></div>
+		</div><!--/#map-wide-->
 	    <?php } ?>
         
         <div id="content" class="container clearfix">

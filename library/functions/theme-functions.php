@@ -479,33 +479,6 @@ if ( !function_exists('sp_pagination') ) {
 
 }
 
-
-/* ---------------------------------------------------------------------- */
-/*	Highlight Search result
-/* ---------------------------------------------------------------------- */
-/**
- * Highlight search result titles and excerpt
- */
-if ( ! function_exists( 'highlight_search_title' ) ) :
-	function highlight_search_title() {
-		$title = get_the_title();
-		$keys = implode( '|', explode(' ', get_search_query() ) );
-		$keys = preg_quote( $keys );
-		$title = preg_replace( '/(' . $keys . ')/iu', '<ins>\0</ins>', $title );
-		echo $title;
-	}
-endif;
-
-if ( ! function_exists( 'highlight_search_excerpt' ) ) :
-	function highlight_search_excerpt() {
-		$excerpt = get_the_excerpt();
-		$keys = implode( '|', explode( ' ', get_search_query() ) );
-		$keys = preg_quote( $keys );
-		$excerpt = preg_replace( '/(' . $keys . ')/iu', '<ins>\0</ins>', $excerpt );
-		echo '<p>' . $excerpt . '</p>';
-	}
-endif;
-
 /*-----------------------------------------------------------------------------------*/
 /* Social 
 /*-----------------------------------------------------------------------------------*/

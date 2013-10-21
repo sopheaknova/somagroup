@@ -381,7 +381,137 @@ $of_options[] = array( "name" => "Slide delay",
 					"id" => "bxslider_pause",
 					"std" => "5000",
 					"type" => "text"
-					);				
+					);
+					
+//Social Networking
+$of_options[] = array(         "name"	=> "Social Networking",
+                               "type"	=> "heading",
+                               "icon" => SP_ASSETS_ADMIN . "images/icon-social.png"
+                      );
+
+$of_options[] = array(         "name"	=> "Mini social networking on top",
+                               "desc"	=> "Show/Hide mini social networking on top bar",
+                               "id"		=> "topbar_social",
+                               "std"	=> 1,
+                               "type"	=> "switch"
+                                );                                
+
+$of_options[] = array( "name" => 'Custom Feed URL',
+                                        "desc" => "",
+                                        "id" => "introduction",
+                                        "std" => "<h3>Custom Feed URL</h3>",
+                                        "icon" => true,
+                                        "type" => "info",
+                                        );
+                                                                        
+        $of_options[] = array( "name" => "Hide Rss Icon",
+                                                "desc" => "Hide rss icon in social widget",
+                                                "id" => "rss_icon",
+                                                "std" => 1,
+                                                "type" => "switch"
+                                                );
+                                                
+        $of_options[] = array( "name" => "Custom Feed URL",
+                                                "desc" => "e.g: http://www.feedburner.com/userid",
+                                                "id" => "rss_url",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );        
+                                                
+$of_options[] = array( "name" => 'Social Networking',
+                                        "desc" => "",
+                                        "id" => "introduction",
+                                        "std" => "<h3>Social Networking</h3>",
+                                        "icon" => true,
+                                        "type" => "info",
+                                        );
+
+        $of_options[] = array( "name" => "Facebook URL",
+                                                "id" => "social_facebook",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );        
+        
+        $of_options[] = array( "name" => "Twitter URL",
+                                                "id" => "social_twitter",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                
+        $of_options[] = array( "name" => "Google+ URL",
+                                                "id" => "social_google_plus",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "LinkedIn URL",
+                                                "id" => "social_linkedin",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "YouTube URL",
+                                                "id" => "social_youtube",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "Vimeo URL",
+                                                "id" => "social_vimeo",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "Skype URL",
+                                                "id" => "social_skype",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "Delicious URL",
+                                                "id" => "social_delicious",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );
+                                                                                        
+        $of_options[] = array( "name" => "Instagram URL",
+                                                "id" => "social_instagram",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );        
+                                                
+        $of_options[] = array( "name" => "Pinterest URL",
+                                                "id" => "social_pinterest",
+                                                "std" => "",
+                                                "type" => "text"
+                                                );					
+					
+// Contact
+$of_options[] = array( "name" => "Contact",
+                       "type" => "heading",
+                       "icon" => SP_ASSETS_ADMIN . "images/icon-map.png"
+                       );
+
+$of_options[] = array( "name" => "Latitude",
+                                        "desc" => "Latitude of google map see <a href='http://itouchmap.com/latlong.html' target='_blank'>itouchmap.com</a>",
+                                        "id" => "map_lat",
+                                        "std" => "11.570868",
+                                        "type" => "text"
+                                        );
+
+$of_options[] = array( "name" => "Longitude",
+                                        "desc" => "Longitude of google map see <a href='http://itouchmap.com/latlong.html' target='_blank'>itouchmap.com</a>",
+                                        "id" => "map_long",
+                                        "std" => "104.91887",
+                                        "type" => "text"
+                                        );
+                                        
+$of_options[] = array( "name" => "Email",
+                                        "desc" => "",
+                                        "id" => "email",
+                                        "std" => "info@somagroup.com.kh",
+                                        "type" => "text"
+                                        );									
 				
 //Footer
 $of_options[] = array( "name" => "Footer Layout",

@@ -14,9 +14,7 @@
 	    elseif ( 'audio' == get_post_format() )
 	        get_template_part( 'formats/format', 'audio' );    
 	    else {
-	    	echo '<div class="post-thumbnail">';
-			the_post_thumbnail( 'size_max' );
-			echo '</div>'; 
+	    	the_post_thumbnail( 'size_max' );
 		}	
 	?>
 	

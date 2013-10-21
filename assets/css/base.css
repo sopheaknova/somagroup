@@ -60,7 +60,7 @@ html {
 
 body {
 	font: 13px/1.5em "Droid Sans", Arial, sans-serif;
-	color: #444;
+	color: #222;
 	background: #fff;
 	-webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
@@ -507,13 +507,13 @@ input[type="reset"]{
 	cursor: pointer;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 	vertical-align: middle;
-	background-color: #4d90fe;
+	background-color: #999999;
 	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(center top , #4d90fe, #4787ed);
-	background-image: -moz-linear-gradient(center top , #4d90fe, #4787ed);
-	background-image: -ms-linear-gradient(center top , #4d90fe, #4787ed);
-	background-image: -o-linear-gradient(center top , #4d90fe, #4787ed);
-	background-image: linear-gradient(center top , #4d90fe, #4787ed);
+	background-image: -webkit-linear-gradient(center top , #aaaaaa, #999999);
+	background-image: -moz-linear-gradient(center top , #aaaaaa, #999999);
+	background-image: -ms-linear-gradient(center top , #aaaaaa, #999999);
+	background-image: -o-linear-gradient(center top , #aaaaaa, #999999);
+	background-image: linear-gradient(center top , #aaaaaa, #999999);
 }
 
 button:hover,
@@ -523,15 +523,15 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 article.post-password-required input[type=submit]:hover {
 	color: #fff;
-	background-color: #357ae8;
+	background-color: #f5ad00;
 	border-color: #bbb;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(center top , #4d90fe, #357ae8);
-	background-image: -moz-linear-gradient(center top , #4d90fe, #357ae8);
-	background-image: -ms-linear-gradient(center top , #4d90fe, #357ae8);
-	background-image: -o-linear-gradient(center top , #4d90fe, #357ae8);
-	background-image: linear-gradient(center top , #4d90fe, #357ae8);
+	background-image: -webkit-linear-gradient(center top , #f5c143, #f5ad00);
+	background-image: -moz-linear-gradient(center top , #f5c143, #f5ad00);
+	background-image: -ms-linear-gradient(center top , #f5c143, #f5ad00);
+	background-image: -o-linear-gradient(center top , #f5c143, #f5ad00);
+	background-image: linear-gradient(center top , #f5c143, #f5ad00);
 }
 
 button:active,

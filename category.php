@@ -24,7 +24,9 @@ get_header(); ?>
 			<?php endif; ?>
 			
 			<!-- RSS -->
+			<?php if ( !$smof_data['rss_icon'] ){ ?>
 			<a class="rss-cat-icon ttip" title="<?php _e( 'Feed Subscription', SP_TEXT_DOMAIN ); ?>" href="<?php echo get_category_feed_link($category_id) ?>"><?php _e( 'Feed Subscription', SP_TEXT_DOMAIN ); ?></a>
+			<?php } ?>
 			<div class="clear"></div>
 			
 			<!-- Category description -->
