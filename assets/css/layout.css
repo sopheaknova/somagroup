@@ -592,6 +592,11 @@ border-top: 2px solid #f5ad00;
 	.widget ul li.current_page_item > a{
 		color: #CC0000;
 	}
+	
+	/*custom widget heading text*/
+	.widget h3, .widget h5{
+		padding-top: 0;
+	}
 
 	/* -------------------------------------------------- */
 	/*	Social Widget
@@ -741,6 +746,7 @@ h1.entry-title{
 	line-height: 1.2;
 	margin: 0 0 20px;
 	color: #CC0000;
+	padding-top: 0;
 }
 
 /* Post Meta */
