@@ -781,6 +781,12 @@ time:hover {
 				box-sizing: border-box;
 }
 
+.entry-content ul, .entry-content ol{
+	list-style-position: inside;
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+
 /* Blog and Post Archive */
 .archive-title{
 	font-size: 1.5em;
