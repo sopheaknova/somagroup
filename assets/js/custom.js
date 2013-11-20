@@ -99,6 +99,17 @@ jQuery( document ).ready( function($) {
 		auto: true
 	});
 	
+	// Photo slide in post or page
+	$('.photo-slide').bxSlider({
+		mode: bxslider_opt.mode,
+		speed:bxslider_opt.speed,
+		pause:bxslider_opt.pause,
+		autoHover:true,
+		auto: true,
+		captions: true,
+		adaptiveHeight: true
+	});
+	
 	// Partner carousel
 	$('.carousel-partner').bxSlider({
 	    slideWidth: 165,

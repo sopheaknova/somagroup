@@ -184,6 +184,18 @@
                image:  url +  "../../img/ed_services.png"
             });
             
+            //Carousel
+			ed.addButton('carousel', {
+            title : 'Add partner carousel',
+                onclick : function() {
+					
+                    ed.focus();
+					ed.selection.setContent(' [carousel_partner]');
+                   
+                },
+             image:  url +  "../../img/ed_carousel.png"
+            });
+            
             //Latest blog
 			ed.addCommand('latest-blog', function() {
 				ed.windowManager.open({
@@ -201,16 +213,21 @@
                image:  url +  "../../img/ed_blog.png"
             });
             
-            //Carousel
-			ed.addButton('carousel', {
-            title : 'Add partner carousel',
-                onclick : function() {
-					
-                    ed.focus();
-					ed.selection.setContent(' [carousel_partner]');
-                   
-                },
-             image:  url +  "../../img/ed_carousel.png"
+             //Photo slide
+			ed.addCommand('photo-slide', function() {
+				ed.windowManager.open({
+					file : url +  '../../shortcodes/photo-slide.php'+sp_wpml_lang,
+					width : 350,
+					height : 140,
+					inline : 1
+				});
+			
+			});
+						
+			ed.addButton('photo-slide', {
+            title : 'Photo slide',
+               cmd : 'photo-slide',
+               image:  url +  "../../img/ed_photo_slide.png"
             });
 			
         },

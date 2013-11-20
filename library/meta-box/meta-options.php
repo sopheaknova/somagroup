@@ -97,6 +97,27 @@ $meta_boxes[] = array(
 );
 
 /* ---------------------------------------------------------------------- */
+/*	Custom post: SLIDER
+/* ---------------------------------------------------------------------- */
+
+$meta_boxes[] = array(
+	'id'       => 'slider-options',
+	'title'    => __('Upload setting', 'sptheme_admin'),
+	'pages'    => array('slider'),
+	'context'  => 'normal',
+	'priority' => 'high',
+	'fields'   => array(
+		array(
+			'name' => __('Upload images', 'sptheme_admin'),
+			'id'   => $prefix . 'image_slide',
+			'type' => 'image_advanced',
+			'max_file_uploads' => 4,
+			'desc' => __('Support image files .png, .jpg and .gif. Better upload image size max 1024px by 768px', 'sptheme_admin'),
+		)
+	)
+);
+
+/* ---------------------------------------------------------------------- */
 /*	Custom post: SLIDESHOW
 /* ---------------------------------------------------------------------- */
 

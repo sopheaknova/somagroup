@@ -26,7 +26,7 @@ function register_shortcodes_button( $buttons ) {
 	//array_push( $buttons, "highlight", "notifications", "buttons", "divider", "toggle", "tabs", "accordian", "dropcaps", "video", "soundcloud", "columns" );
 	if ( (get_post_type() == 'page') || (get_post_type() == 'post') )
 	{
-		array_push( $buttons, "divider", "toggle", "tabs", "accordian", "dropcaps", "section-title", "video", "soundcloud", "carousel", "services-grid", "latest-blog", "columns" );	
+		array_push( $buttons, "divider", "toggle", "tabs", "accordian", "dropcaps", "section-title", "video", "soundcloud", "carousel", "services-grid", "latest-blog", "photo-slide", "columns" );
 	}
     return $buttons;
 }
@@ -312,7 +312,7 @@ function sp_carousel_partner( $atts, $content = null ) {
 		$output .= '</div>';
 		
     else: 
-		$output .= '<p>' . __( 'Sorry, There are no slide, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p>';
+		$output .= '<p>' . __( 'Sorry, There are no logo, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p>';
     endif;
     
     return $output;
@@ -363,7 +363,7 @@ function sp_latest_blog( $atts, $content = null ) {
 		$output .= '</li>';
 		endwhile;
     else: 
-		$output .= '<li><p>' . __( 'Sorry, There are no slide, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p></li>';
+		$output .= '<li><p>' . __( 'Sorry, There are no post, It is coming shortly.', SP_TEXT_DOMAIN ) . '</p></li>';
     endif;  
     	$output .= '</ul><!-- #latest-news -->';
     	
@@ -372,7 +372,58 @@ function sp_latest_blog( $atts, $content = null ) {
     return $output;
 	  
 }
-add_shortcode('latest_blog', 'sp_latest_blog');	
+add_shortcode('latest_blog', 'sp_latest_blog');
+
+//photo slide
+function sp_photo_slide( $atts, $content = null ) {
+
+	extract( shortcode_atts( array(
+      'id' => ''
+      ), $atts ) );
+      
+    $args = array (
+	                'post_type'	=> 'slider',
+	                'p'	=> $id
+	            );
+    $post_query = new WP_Query($args);
+    if ($post_query->have_posts()) :
+    	$output = '<div class="post-photo-slide">';
+    	while ( $post_query->have_posts() ) : $post_query->the_post();
+		
+		$slides = rwmb_meta('sp_image_slide', array('type' => 'plupload_image', 'size' => 'large'));
+		$slides_thumb = rwmb_meta('sp_image_slide', array('type' => 'plupload_image', 'size' => 'thumbnail'));
+		$slide_index = 0;
+		
+		$output .= '<ul class="photo-slide">';
+		foreach ( $slides as $image ){
+			$output .= '<li>';
+			$output .= '<img src="' . $image['url'] . '" title="' . $image['caption'] . '" />';
+			$output .= '</li>';
+		}
+		$output .= '</ul><!-- .photo-slide -->';
+				
+		/*
+$output .= '<div id="nav-bx-slider">';
+		foreach ( $slides_thumb as $image_thumb ){
+			$output .= '<a data-slide-index="' . $slide_index . '" href=""><img src="' . $image_thumb['url'] . '" /></a>';
+			$slide_index++;
+		}
+		$output .= '</div><!-- .nav-bx-slider -->';
+*/
+		
+		$output .= '</div><!-- .post-photo-slide -->';
+
+		endwhile;
+		
+	
+		
+    endif;  
+   wp_reset_postdata();
+    
+    return $output;
+	  
+}
+add_shortcode('photo_slide', 'sp_photo_slide');	
 
 //Section title
 function sp_section_title($atts, $content = null)

@@ -44,22 +44,22 @@ jQuery( document ).ready( function($) {
 
 	}
 	
-	/*
+	
 $('#page_template').change(function() {
 		changePageTemplate( $(this).val() );
 	});
 	
 	function changePageTemplate( val ) {
 		
-		$generalSettings.show();
+		$('#layout-settings').show();
 		
-		if( val === 'page-contact.php' || val === 'page-teams.php' ) {
+		if( val === 'template-contact.php' || val === 'template-home.php' ) {
 
-			$generalSettings.hide();
+			$('#layout-settings').hide();
 			
 		}
 	}
-*/	
+	
 	
 	$pageLayout.each(function() {
 		

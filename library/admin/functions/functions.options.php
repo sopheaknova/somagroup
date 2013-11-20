@@ -117,27 +117,12 @@ $of_options[] = array( 	"name" 		=> "Layout style",
 										"boxed" => "boxed",
 										"stretched" => "stretched"		
 									)
-				);
-				
-$url =  ADMIN_DIR . 'assets/images/';
-$of_options[] = array( 	"name" 		=> "Main Layout",
-						"desc" 		=> "Select main content and sidebar alignment. Choose between 1, 2 or 3 column layout.",
-						"id" 		=> "layout",
-						"std" 		=> "2c-l-fixed.css",
-						"type" 		=> "images",
-						"options" 	=> array(
-							'1col-fixed.css' 	=> $url . '1col.png',
-							'2c-r-fixed.css' 	=> $url . '2cr.png',
-							'2c-l-fixed.css' 	=> $url . '2cl.png',
-							'3c-fixed.css' 		=> $url . '3cm.png',
-							'3c-r-fixed.css' 	=> $url . '3cr.png'
-						)
-				);								
+				);							
 				
 $of_options[] = array( 	"name" 		=> "Main Custom Logo",
 						"desc" 		=> "Upload a Png/Gif image that will represent your website's logo.",
 						"id" 		=> "theme_logo",
-						"std" 		=> SP_ASSETS_THEME . "images/logo.gif",
+						"std" 		=> SP_ASSETS_THEME . "images/logo.png",
 						"type" 		=> "upload"
 				);
 				
@@ -146,211 +131,19 @@ $of_options[] = array( 	"name" 		=> "Custom Favicon",
 						"id" 		=> "theme_favicon",
 						"std" 		=> SP_BASE_URL . "favicon.ico",
 						"type" 		=> "upload"
-				);	
-				
-// styling options				
-$of_options[] = array( 	"name" 		=> "Styling Options",
-						"type" 		=> "heading"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Theme Stylesheet",
-						"desc" 		=> "Select your themes alternative color scheme.",
-						"id" 		=> "alt_stylesheet",
-						"std" 		=> "default.css",
-						"type" 		=> "select",
-						"options" 	=> $alt_stylesheets
-				);
-				
-$of_options[] = array( 	"name" 		=> "Body Background Color",
-						"desc" 		=> "Pick a background color for the theme (default: #fff).",
-						"id" 		=> "body_background",
-						"std" 		=> "",
-						"type" 		=> "color"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Header Background Color",
-						"desc" 		=> "Pick a background color for the header (default: #fff).",
-						"id" 		=> "header_background",
-						"std" 		=> "",
-						"type" 		=> "color"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Footer Background Color",
-						"desc" 		=> "Pick a background color for the footer (default: #fff).",
-						"id" 		=> "footer_background",
-						"std" 		=> "",
-						"type" 		=> "color"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Body Font",
-						"desc" 		=> "Specify the body font properties",
-						"id" 		=> "body_font",
-						"std" 		=> array('size' => '12px','face' => 'arial','style' => 'normal','color' => '#000000'),
-						"type" 		=> "typography"
-				);  
-				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"desc" 		=> "Quickly add some CSS to your theme by adding it to this block.",
-						"id" 		=> "custom_css",
-						"std" 		=> "",
-						"type" 		=> "textarea"
-				);
-
-// Example options				
-$of_options[] = array( 	"name" 		=> "Example Options",
-						"type" 		=> "heading"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Typography",
-						"desc" 		=> "This is a typographic specific option.",
-						"id" 		=> "typography",
-						"std" 		=> array(
-											'size'  => '12px',
-											'face'  => 'verdana',
-											'style' => 'bold italic',
-											'color' => '#123456'
-										),
-						"type" 		=> "typography"
-				);  
-				
-$of_options[] = array( 	"name" 		=> "Border",
-						"desc" 		=> "This is a border specific option.",
-						"id" 		=> "border",
-						"std" 		=> array(
-											'width' => '2',
-											'style' => 'dotted',
-											'color' => '#444444'
-										),
-						"type" 		=> "border"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Colorpicker",
-						"desc" 		=> "No color selected.",
-						"id" 		=> "example_colorpicker",
-						"std" 		=> "",
-						"type" 		=> "color"
-					); 
-					
-$of_options[] = array( 	"name" 		=> "Colorpicker (default #2098a8)",
-						"desc" 		=> "Color selected.",
-						"id" 		=> "example_colorpicker_2",
-						"std" 		=> "#2098a8",
-						"type" 		=> "color"
-				);
-
-$of_options[] = array( 	"name" 		=> "Input Text",
-						"desc" 		=> "A text input field.",
-						"id" 		=> "test_text",
-						"std" 		=> "Default Value",
+$of_options[] = array( 	"name" 		=> "Slogan Text",
+						"id" 		=> "slogan_text",
+						"std" 		=> "Taking the business of Cambodia into the future",
 						"type" 		=> "text"
-				);
+				);				
 				
-$of_options[] = array( 	"name" 		=> "Input Checkbox (false)",
-						"desc" 		=> "Example checkbox with false selected.",
-						"id" 		=> "example_checkbox_false",
-						"std" 		=> 0,
-						"type" 		=> "checkbox"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Input Checkbox (true)",
-						"desc" 		=> "Example checkbox with true selected.",
-						"id" 		=> "example_checkbox_true",
-						"std" 		=> 1,
-						"type" 		=> "checkbox"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Normal Select",
-						"desc" 		=> "Normal Select Box.",
-						"id" 		=> "example_select",
-						"std" 		=> "three",
-						"type" 		=> "select",
-						"options" 	=> $of_options_select
-				);
-				
-$of_options[] = array( 	"name" 		=> "Mini Select",
-						"desc" 		=> "A mini select box.",
-						"id" 		=> "example_select_2",
-						"std" 		=> "two",
-						"type" 		=> "select",
-						"mod" 		=> "mini",
-						"options" 	=> $of_options_radio
-				); 
-				
-$of_options[] = array( 	"name" 		=> "Google Font Select",
-						"desc" 		=> "Some description. Note that this is a custom text added added from options file.",
-						"id" 		=> "g_select",
-						"std" 		=> "Select a font",
-						"type" 		=> "select_google_font",
-						"preview" 	=> array(
-										"text" => "This is my preview text!", //this is the text from preview box
-										"size" => "30px" //this is the text size from preview box
-						),
-						"options" 	=> array(
-										"none" => "Select a font",//please, always use this key: "none"
-										"Lato" => "Lato",
-										"Loved by the King" => "Loved By the King",
-										"Tangerine" => "Tangerine",
-										"Terminal Dosis" => "Terminal Dosis"
-						)
-				);
-				
-$of_options[] = array( 	"name" 		=> "Google Font Select2",
-						"desc" 		=> "Some description.",
-						"id" 		=> "g_select2",
-						"std" 		=> "Select a font",
-						"type" 		=> "select_google_font",
-						"options" 	=> array(
-										"none" => "Select a font",//please, always use this key: "none"
-										"Lato" => "Lato",
-										"Loved by the King" => "Loved By the King",
-										"Tangerine" => "Tangerine",
-										"Terminal Dosis" => "Terminal Dosis"
-									)
-				);
-				
-$of_options[] = array( 	"name" 		=> "Input Radio (one)",
-						"desc" 		=> "Radio select with default of 'one'.",
-						"id" 		=> "example_radio",
-						"std" 		=> "one",
-						"type" 		=> "radio",
-						"options" 	=> $of_options_radio
-				);
-				
-$url =  ADMIN_DIR . 'assets/images/';
-$of_options[] = array( 	"name" 		=> "Image Select",
-						"desc" 		=> "Use radio buttons as images.",
-						"id" 		=> "images",
-						"std" 		=> "warning.css",
-						"type" 		=> "images",
-						"options" 	=> array(
-											'warning.css' 	=> $url . 'warning.png',
-											'accept.css' 	=> $url . 'accept.png',
-											'wrench.css' 	=> $url . 'wrench.png'
-										)
-				);
-				
-$of_options[] = array( 	"name" 		=> "Textarea",
-						"desc" 		=> "Textarea description.",
-						"id" 		=> "example_textarea",
-						"std" 		=> "Default Text",
+$of_options[] = array( 	"name" 		=> "Footer Text",
+						"id" 		=> "footer_text",
+						"std" 		=> "SOMA GROUP Co Ltd., © 2013 All Right Reserved.",
 						"type" 		=> "textarea"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Multicheck",
-						"desc" 		=> "Multicheck description.",
-						"id" 		=> "example_multicheck",
-						"std" 		=> array("three","two"),
-						"type" 		=> "multicheck",
-						"options" 	=> $of_options_radio
-				);
-				
-$of_options[] = array( 	"name" 		=> "Select a Category",
-						"desc" 		=> "A list of all the categories being used on the site.",
-						"id" 		=> "example_category",
-						"std" 		=> "Select a category:",
-						"type" 		=> "select",
-						"options" 	=> $of_categories
-				);
+				);					
 				
 // Featured Slider
 $of_options[] = array( 	"name" => "Slides Settings",
@@ -514,6 +307,7 @@ $of_options[] = array( "name" => "Email",
                                         );									
 				
 //Footer
+/*
 $of_options[] = array( "name" => "Footer Layout",
 						"type" => "heading",
 						"icon"		=> SP_ASSETS_ADMIN . "images/icon-footer.png"
@@ -524,7 +318,8 @@ $of_options[] = array( 	"name" 		=> "Footer Text",
 						"id" 		=> "footer_text",
 						"std" 		=> "SOMA GROUP Co Ltd., © 2013 All Right Reserved. ",
 						"type" 		=> "textarea"
-				);				
+				);
+*/				
 				
 //Advanced Settings
 $of_options[] = array( 	"name" 		=> "Advanced Settings",

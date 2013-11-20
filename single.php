@@ -23,7 +23,7 @@ get_header(); ?>
                 elseif ( 'audio' == get_post_format() )
                     get_template_part( 'formats/format', 'audio' );    
                 else {
-					the_post_thumbnail( 'size_max' ); 
+					//the_post_thumbnail( 'size_max' ); 
 				}	
 				?>
 				<div class="entry-content">

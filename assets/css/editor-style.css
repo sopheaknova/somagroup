@@ -7,9 +7,9 @@ html {
 	font-size: 100%;
 }
 
-/*html .mceContentBody {
-	max-width: 625px;
-}*/
+html .mceContentBody {
+	max-width: 620px;
+}
 
 body {
 	font: 13px/1.5em "Droid Sans", Arial, sans-serif;
@@ -301,4 +301,12 @@ img.wp-smiley {
 	font-size: 1em;
 	line-height: 1.5;
 	margin: 0 0 1.5em;
+}
+img.attachment-size_max, img.size-full, 
+img.alignleft, img.alignright, img.aligncenter, img.alignnone{
+	border: 1px solid #E5E5E5;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+				box-sizing: border-box;
 }

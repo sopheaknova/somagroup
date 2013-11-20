@@ -191,7 +191,7 @@
 		font-size: 16px;
 		font-weight: normal;
 		line-height: 1.5;
-		padding: 0.85714em;
+		padding: 0.5em 2em;
 		color: #fff;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -283,6 +283,7 @@ border-top: 2px solid #f5ad00;
 		-moz-transition: none;
 		-o-transition: none;
 		transition: none;
+		border-bottom: 1px solid #999;
 	}
 	
 	.primary-nav li ul li:last-child a {
@@ -351,7 +352,7 @@ border-top: 2px solid #f5ad00;
 		float: left;
 		width: auto;
 		max-width: 45%;
-		margin: 1.25em 0;
+		margin: 0 0 1.25em;
 		padding: 0;
 	}
 	
@@ -362,6 +363,7 @@ border-top: 2px solid #f5ad00;
 	.brand h1,
 	.brand h2{
 		margin: 0;
+		padding: 0;
 		font-size: 26px;
 		font-weight: normal;
 		line-height: 1.25;
@@ -397,8 +399,13 @@ border-top: 2px solid #f5ad00;
 		vertical-align: bottom;
 		margin-right: 10px;
 	}
-	.service-items a{
+	/*
+.service-items a{
 		color: #222;
+	}
+*/
+	.service-items a.more{
+		color:#666;
 	}
 	.service-items p{
 		margin-bottom: 0.8em;
@@ -410,6 +417,7 @@ border-top: 2px solid #f5ad00;
 	#latest-news{
 		padding-left: 0;
 		list-style: none;
+		margin: 0;
 	}
 	#latest-news li{
 		padding: 10px 0;
@@ -1018,9 +1026,11 @@ a.rss-cat-icon{
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		overflow: hidden;
+		height: 430px;
 	}
 	.home-bxslider li{
-		min-height: 430px;
+		height: 430px;
 	}
 	.home-bxslider .headline{
 		margin-top: 300px;
@@ -1047,6 +1057,19 @@ a.rss-cat-icon{
 		.home-bxslider .headline span.desc p{
 			margin: 0;
 		}
+
+/* single post and page bxslider */
+.post-photo-slide .bx-wrapper .bx-viewport{
+	box-shadow: none;
+	border: none;
+	left: 0;
+	background: transparent;
+}
+
+.post-photo-slide .bx-wrapper .bx-viewport .photo-slide li{
+	right: 0;
+}
+
 
 /*Carousel bxslider*/
 #partner .bx-wrapper{

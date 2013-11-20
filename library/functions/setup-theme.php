@@ -47,7 +47,7 @@ function sp_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Add post formats
-	add_theme_support( 'post-formats', array( 'gallery', 'video', 'audio' ) );
+	//add_theme_support( 'post-formats', array( 'gallery', 'video', 'audio' ) );
 
 	// Add navigation menus
 	register_nav_menus( array(
@@ -269,7 +269,7 @@ if ( ! function_exists( 'sp_rss_post_thumbnail' ) ) {
 function sp_custom_login_logo() {
     echo '<style type="text/css">
 		body.login{ background-color:#ffffff; }
-        .login h1 a { background-image:url('.SP_ASSETS_THEME.'images/logo.gif) !important; height:90px !important; background-size: auto auto !important;}
+        .login h1 a { background-image:url('.SP_ASSETS_THEME.'images/logo.png) !important; height:87px !important; width:395px !important; background-size: auto auto !important; margin-left:-35px;}
     </style>';
 }
 

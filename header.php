@@ -64,7 +64,12 @@ global $smof_data;
             </div><!-- end .brand -->
             
             <div class="slogan">
-	            <h5><?php echo _e('The Future business of Cambodia', SP_TEXT_DOMAIN); ?></h5>
+	            <h5>
+	            <?php 
+	            if($smof_data['slogan_text'])
+	            	echo $smof_data['slogan_text']; 
+	            ?>
+	            </h5>
             </div> <!-- end .slogan -->
             
 		</div><!-- end .container .clearfix -->
@@ -92,7 +97,18 @@ global $smof_data;
 			<li style="background:url(<?php echo sp_post_thumbnail('slideshow');?>) center top no-repeat;">
 			<div class="container">
 				<div class="headline">
-					<span class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span><br />
+					<span class="title">
+					<?php 
+					$slide_link = get_post_meta( get_the_ID(), 'sp_slide_link', true );
+					if ( !$slide_link || $slide_link == '' ){
+						the_title();
+					} else {
+					?>
+					<a href="<?php echo $slide_link; ?>"><?php the_title(); ?></a>
+					<?php	
+					}
+					?>
+					</span><br />
 					<span class="desc"><?php the_content(); ?></span>
 				</div>	
 			</div>
