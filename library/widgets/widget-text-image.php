@@ -41,13 +41,13 @@ class sp_widget_text_image extends WP_Widget {
             jQuery(document).ready(function($){
                              
                  $('.upload-image').live('click', function(){
-                    var betterwork_this_object = $(this).prev();
+                    var sp_this_object = $(this).prev();
                     
                     tb_show('', 'media-upload.php?post_id=0&type=image&TB_iframe=true');    
                 
                     window.send_to_editor = function(html) {
                         imgurl = $('img', html).attr('src');
-                        betterwork_this_object.val(imgurl);
+                        sp_this_object.val(imgurl);
                         
                         tb_remove();
                     }          
