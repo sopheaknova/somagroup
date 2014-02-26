@@ -136,5 +136,8 @@ jQuery( document ).ready( function($) {
 	} );
 	
 	$( "a[rel^='prettyPhoto[group1]'], a[rel^='prettyPhoto[group2]'], a[rel^='prettyPhoto[inline]'], a[rel^='prettyPhoto']" ).prettyPhoto();
+
+	$("#top-nav ul li.menu-item:last").html($("#top-nav ul li.menu-item:last").html().replace("</a> -","</a>"));
+	$("#footer-nav ul li.menu-item:last").html($("#footer-nav ul li.menu-item:last").html().replace("</a> -","</a>"));
 																																	  
 } )

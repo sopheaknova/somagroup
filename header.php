@@ -35,13 +35,15 @@ global $smof_data;
 <div id="wrapper">
 		 
         <header id="header" class="site-header" role="banner">
-		
 		<div id="utility-top">
 			<div class="container clearfix">
 			<div id="search-bar" role="complementary">
 				<?php get_search_form(); ?>
 			</div>
-			<?php
+			<nav id="top-nav" role="navigation">
+	        	<?php echo sp_top_navigation(); ?>
+	    	</nav>
+	    	<?php
 			if ($smof_data['topbar_social'])
                     sp_get_social( 'yes' , '24' , 'tooldown' , false );
             ?>

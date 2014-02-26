@@ -51,6 +51,7 @@ function sp_theme_setup() {
 
 	// Add navigation menus
 	register_nav_menus( array(
+		'top'	=> __( 'Top Navigation', SP_TEXT_DOMAIN ),
 		'primary'	=> __( 'Main Navigation', SP_TEXT_DOMAIN ),
 		'footer'  => __( 'Footer Navigation', SP_TEXT_DOMAIN )
 	) );

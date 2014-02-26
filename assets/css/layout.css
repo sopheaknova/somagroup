@@ -34,6 +34,14 @@
 #header{
 	background: url(../images/bg-header.jpg) center top repeat-x;
 }
+.top-nav{ 
+	text-align: right; 
+	padding: 5px 10px;
+	float: right;
+}
+.top-nav a{ color:#CC0000; }
+.top-nav a:hover{color:#555;}
+.top-nav li{ display: inline-block; }
 #content{
 	padding: 50px 0 30px;
 	min-height: 450px
