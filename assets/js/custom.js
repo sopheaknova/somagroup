@@ -92,18 +92,30 @@ jQuery( document ).ready( function($) {
 	
 	// Home slideshow
 	$('.home-bxslider').bxSlider({
-		mode: bxslider_opt.mode,
-		speed:bxslider_opt.speed,
-		pause:bxslider_opt.pause,
+		mode: slider_opt.mode,
+		speed:slider_opt.speed,
+		pause:slider_opt.delay,
 		autoHover:true,
 		auto: true
 	});
+
+	/* Home Slideshow with Flexslider - Fullwidth */
+	$('#flex-fullwidth').flexslider({
+	    animation: "slide",
+	    animationSpeed: 800,
+	    before: function(slider) {
+	      $('.flex-caption').delay(100).fadeOut(100);
+	    },
+	    after: function(slider) {
+	      $('.flex-active-slide').find('.flex-caption').delay(200).fadeIn(400);
+	    }
+	  });
 	
 	// Photo slide in post or page
 	$('.photo-slide').bxSlider({
-		mode: bxslider_opt.mode,
-		speed:bxslider_opt.speed,
-		pause:bxslider_opt.pause,
+		mode: slider_opt.mode,
+		speed:slider_opt.speed,
+		pause:slider_opt.delay,
 		autoHover:true,
 		auto: true,
 		captions: true,
@@ -128,7 +140,7 @@ jQuery( document ).ready( function($) {
 	  });
 	
 	// Single post slideshow with Flexslider
-	$('.flexslider').flexslider();
+	//$('.flexslider').flexslider();
 	
 	// PrettyPhoto Init	
 	$( 'a[data-rel]' ).each( function() {

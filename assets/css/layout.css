@@ -1035,10 +1035,10 @@ a.rss-cat-icon{
 		padding: 0;
 		list-style: none;
 		overflow: hidden;
-		height: 430px;
+		height: 850px;
 	}
 	.home-bxslider li{
-		height: 430px;
+		height: 850px;
 	}
 	.home-bxslider .headline{
 		margin-top: 300px;
@@ -1093,23 +1093,34 @@ a.rss-cat-icon{
 }
 
 /*Flexslider customize*/
-.flexslider{
-	border-radius: 0;
-	box-shadow: none;
-	margin-bottom: 3em;
+.flex-direction-nav a:before  { 
+	font-family:'fontello'; 
+	content: '\e0CD';
+	line-height: 40px; 
 }
-	.flexslider	.slides li p{
-		background-color: #f8f8f8;
-		position: absolute;
-		bottom: 0;
-		padding: 1em;
-		margin: 0;
-		width: 100%;
-		-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-				box-sizing: border-box;
-	}
-	
-	.flex-control-nav{
-		bottom: -25px;
-	}
+.flex-direction-nav a.flex-next:before  { content: '\e0CC'; }
+#flex-fullwidth { 
+	overflow: hidden; 
+	margin-bottom: 0;
+}
+#flex-fullwidth .flex-caption{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#flex-fullwidth .flex-caption h5{
+	background-color: #CC0000;
+    color: #FFFFFF;
+    font-family: "Montserrat",Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 0.5em 0.6em;
+}
+#flex-fullwidth .flex-caption h5 a { color:#ffffff; }
+#flex-fullwidth .flex-caption p {
+	background-color: #FFFFFF;
+    color: #222222;
+    padding: 0.5em 1em;
+}

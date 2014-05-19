@@ -153,7 +153,7 @@ $of_options[] = array( 	"name" => "Slides Settings",
 					
 $of_options[] = array( "name" => "Effect",
 					"desc" => "select the name of transition effect",
-					"id" => "bxslider_mode",
+					"id" => "slider_mode",
 					"std" => "fade",
 					"type" => "select",
 					"options" => array(
@@ -164,14 +164,14 @@ $of_options[] = array( "name" => "Effect",
 					
 $of_options[] = array( "name" => "Speed transition",
 					"desc" => "The amount of time (in ms) speed transition of slide",
-					"id" => "bxslider_speed",
+					"id" => "slider_speed",
 					"std" => "1000",
 					"type" => "text"
 					);					
 
 $of_options[] = array( "name" => "Slide delay",
 					"desc" => "The amount of time (in ms) between each auto transition",
-					"id" => "bxslider_pause",
+					"id" => "slider_delay",
 					"std" => "5000",
 					"type" => "text"
 					);
