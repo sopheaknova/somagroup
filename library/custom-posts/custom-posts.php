@@ -2,7 +2,7 @@
 
 //All custom posts
 require_once( SP_BASE_DIR . 'library/custom-posts/cp-slideshow.php' );
-require_once( SP_BASE_DIR . 'library/custom-posts/cp-slider.php' );
+//require_once( SP_BASE_DIR . 'library/custom-posts/cp-slider.php' );
 require_once( SP_BASE_DIR . 'library/custom-posts/cp-partner.php' );
 
 //Taxonomies
