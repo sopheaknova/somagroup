@@ -5,20 +5,16 @@
 get_header(); ?>
 
     <div id="main" role="main">
-		<?php 
-        if ( ! have_posts() ) : ?>
-            <article id="post-0" class="post no-results not-found">
-                <header class="entry-header">
-                    <h2 class="entry-title"><?php _e( 'Nothing Found', SP_TEXT_DOMAIN ); ?></h2>
-                </header>
-                <div class="entry-content">
-                    <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', SP_TEXT_DOMAIN ); ?></p>
-                <?php get_search_form(); ?>
-                </div><!-- .entry-content -->
-            </article><!-- #post-0 -->
-        <?php endif;
-        while ( have_posts() ) :
-			the_post(); ?>
+		<header class="entry-header">
+            <?php if ( have_posts() ): ?>
+                <h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'sptheme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            <?php else: ?>
+                <h1 class="entry-title"><?php _e( 'Nothing Found', 'sptheme' ); ?></h1>
+            <?php endif; ?>
+        </header><!-- end .entry-header -->
+        <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear' ); ?>>
 			<h6><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h6>
 			<p><?php echo sp_excerpt_length(40); ?></p>
@@ -30,6 +26,12 @@ get_header(); ?>
 			else 
 				echo sp_pagination(); 
 		?>
+        <?php else: ?>
+            <article id="post-0" class="hentry post no-results not-found">
+                <h3><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sptheme' ); ?></h3>
+            </article><!-- end .hentry -->
+
+        <?php endif; ?>
     </div><!-- #main -->
 
 <?php get_sidebar(); ?>

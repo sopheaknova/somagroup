@@ -58,6 +58,7 @@
 	/* -------------------------------------------------- */
 	/*        Top utility bar
 	/* -------------------------------------------------- */
+	#utility-top { padding: 10px 0; }
 	#utility-top .social-icons{
 		text-align: right;
 		padding: 2px;
@@ -111,6 +112,19 @@
 	.is-stretched #search-bar .searchbox {
 	        padding: 0.16666em 0;
 	}
+
+	/* Search result */
+	.search .entry-header h1 {
+		color: #4E4E4E;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #E5E5E5;
+	}
+	.search .entry-header span { color: #CC0000; }
+	.search article {
+		padding: 15px 0 0;
+		border-bottom: 1px dotted #ededed;
+	}
+	.search article h6 { padding-top: 0; }
 
 	/* -------------------------------------------------- */
 	/*	Main
@@ -394,9 +408,9 @@ border-top: 2px solid #f5ad00;
 	}
 	.slogan h5{
 		color: #71c9f1;
-		font-family: Georgia;
 		font-style: italic;
 		padding-top: 40px;
+		font-size: 16px;
 	}
 	
 	/* -------------------------------------------------- */
