@@ -47,7 +47,7 @@
 	min-height: 450px
 }
 .home #content{
-	padding-top: 20px;
+	padding-top: 0;
 }
 
 .container{
@@ -1103,10 +1103,13 @@ a.rss-cat-icon{
 	overflow: hidden; 
 	margin-bottom: 0;
 }
+#flex-fullwidth .flex-control-nav{
+	bottom: 0;
+}
 #flex-fullwidth .flex-caption{
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: 40px;
 }
 #flex-fullwidth .flex-caption h5{
 	background-color: #CC0000;
