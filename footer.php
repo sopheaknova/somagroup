@@ -1,5 +1,6 @@
 <?php global $smof_data; ?>       
-    </div><!-- #content -->
+    	</div> <!-- #content -->
+    </div><!-- .container clearfix -->
     
     <footer id="footer" role="contentinfo">
         <div class="container clearfix">

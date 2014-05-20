@@ -19,10 +19,16 @@
 	margin: 0.8% auto;
 	width: 960px;
 	text-align: left;
-	background: #fff;
+	background: #F5F5F5;
 	-webkit-box-shadow: 1px 4px 6px 4px #DEDEDE;
 		   -moz-box-shadow: 1px 4px 6px 4px #DEDEDE;
 		        box-shadow: 1px 4px 6px 4px #DEDEDE;
+}
+.home #wrapper { background-color: #ffffff; }
+.container{
+	margin: 0 auto;
+	position: relative;
+	width:960px;
 }
 
 .is-stretched #wrapper {
@@ -43,18 +49,23 @@
 .top-nav a:hover{color:#555;}
 .top-nav li{ display: inline-block; }
 #content{
-	padding: 50px 0 30px;
-	min-height: 450px
+	background-color: #ffffff;
+	padding: 30px 19px 30px;
+	min-height: 450px;
+	border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .home #content{
-	padding-top: 0;
+	padding: 0 0 30px;
+
+	border:none;
+	box-shadow: none;
 }
 
-.container{
-	margin: 0 auto;
-	position: relative;
-	width:920px;
-}
+
 	/* -------------------------------------------------- */
 	/*        Top utility bar
 	/* -------------------------------------------------- */
@@ -144,7 +155,7 @@
 		}
 		
 	#sidebar {
-		width: 230px;
+		width: 250px;
 	}
 	
 	.sidebar-left #sidebar { float: left; }
@@ -1115,7 +1126,7 @@ a.rss-cat-icon{
 .flex-direction-nav a.flex-next:before  { content: '\e0CC'; }
 #flex-fullwidth { 
 	overflow: hidden; 
-	margin-bottom: 0;
+	margin-bottom: 10px;
 }
 #flex-fullwidth .flex-control-nav{
 	bottom: 0;

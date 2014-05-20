@@ -134,4 +134,5 @@ global $smof_data;
 		</div><!--/#map-wide-->
 	    <?php } ?>
         
-        <div id="content" class="container clearfix">
+        <div class="container">
+        	<div id="content" class="clearfix">
