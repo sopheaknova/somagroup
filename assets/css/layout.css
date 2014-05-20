@@ -511,8 +511,9 @@ border-top: 2px solid #f5ad00;
 		display: block;	
 		color:#aaaaaa;
 	}
-	form.contact-page input[type="text"]{
-		width: 100%;
+	form.contact-page input[type="text"],
+	form.contact-page textarea{
+		width: 90%;
 	}
 	
 /* ---------------------------------------------------------------
