@@ -829,6 +829,8 @@ time:hover {
 	margin-left: 15px;
 }
 
+.entry-content p + ul, .entry-content p + ol, .entry-content p + dl { margin-top: -12px }
+
 /* Blog and Post Archive */
 .archive-title{
 	font-size: 1.5em;
