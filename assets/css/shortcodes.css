@@ -206,7 +206,7 @@ h3.active a:hover {
 	padding: 0;
 	width: 29.8%;
 	float: left;
-	margin-top: 10px;
+	margin-top: 10px!important;
 }
 
 	.tabs-nav-ver li {
