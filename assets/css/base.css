@@ -360,10 +360,11 @@ img.alignnone {
 .wp-caption .wp-caption-text,
 .entry-caption,
 .gallery-caption {
-	color: #220e10;
-	font-size: 18px;
+	color: #aaaaaa;
+	font-size: 12px;
 	font-style: italic;
 	font-weight: 300;
+	margin-bottom: 0;
 }
 
 img.wp-smiley,
