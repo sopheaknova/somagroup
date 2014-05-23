@@ -102,7 +102,11 @@ jQuery( document ).ready( function($) {
 	/* Home Slideshow with Flexslider - Fullwidth */
 	$('#flex-fullwidth').flexslider({
 	    animation: "slide",
-	    animationSpeed: 800,
+	    slideshowSpeed: 8000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+		animationDuration: 200,         //Integer: Set the speed of animations, in milliseconds
+		animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+		pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		pauseOnHover: true,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
 	    before: function(slider) {
 	      $('.flex-caption').delay(100).fadeOut(100);
 	    },
